@@ -19,6 +19,12 @@ public class JenkinsInstance {
 	private Integer failedPodsCount;
 	
 	private Integer runningPodsCount;
+	
+	private String averageCPU;
+	
+	private String averageMemory;
+	
+	private String endPoint;
 
 	public JenkinsInstance(String version, String serviceName, Integer jobsCount, String k8sNamespace) {
 		super();
@@ -70,6 +76,30 @@ public class JenkinsInstance {
 
 	public void setFailedPodsCount(Integer failedPodsCount) {
 		this.failedPodsCount = failedPodsCount;
+	}
+
+	public String getAverageCPU() {
+		return averageCPU;
+	}
+
+	public void setAverageCPU(String averageCPU) {
+		this.averageCPU = averageCPU;
+	}
+
+	public String getAverageMemory() {
+		return averageMemory;
+	}
+
+	public void setAverageMemory(String averageMemory) {
+		this.averageMemory = averageMemory;
+	}
+
+	public String getEndPoint() {
+		return endPoint;
+	}
+
+	public void setEndPoint(String endPoint) {
+		this.endPoint = endPoint;
 	}
 
 

@@ -11,6 +11,6 @@ public interface KubernetesService {
 	
 	public List<Service> getJenkinsServices();
 	
-	public List<Pod> getPods(Map<String, String> labels);
+	public List<Pod> getPods(Map<String, String> labels, String nameSpace);
 
 }
