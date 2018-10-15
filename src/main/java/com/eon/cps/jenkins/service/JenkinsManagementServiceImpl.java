@@ -52,8 +52,7 @@ public class JenkinsManagementServiceImpl implements JenkinsManagementService {
 				jenkinsPods.add(jenkinsPod);
 			}
 
-			String url = "https://cps-hcl-sjs-workshop.westeurope.cloudapp.azure.com/"
-					+ jenkinsService.getMetadata().getName();
+			String url = "";
 
 			JenkinsServer jenkins = getJenkinsVersion(url, "admin", "");
 
@@ -74,33 +73,7 @@ public class JenkinsManagementServiceImpl implements JenkinsManagementService {
 	}
 
 	public JenkinsServer getJenkinsVersion(String url, String username, String pwd) throws URISyntaxException {
-
-		switch (url) {
-
-		case "jenkins1":
-			pwd = "mD7ZcpQaKf";
-			break;
-
-		case "jenkins2":
-			pwd = "e4kCkLCtIA";
-			break;
-
-		case "jenkins4":
-			pwd = "J7EALPw1tP";
-			break;
-
-		case "jenkins5":
-			pwd = "98Am6eyGJj";
-			break;
-
-		default:
-			pwd = "admin";
-			break;
-
-		}
-
 		JenkinsServer jenkins = new JenkinsServer(new URI(url), "admin", pwd);
-
 		return jenkins;
 
 	}
